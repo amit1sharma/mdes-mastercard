@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+	
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
     implementation 'org.projectlombok:lombok:1.18.12'
@@ -31,19 +32,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'wsdl4j:wsdl4j:1.6.3'
     implementation 'org.apache.ws.xmlschema:xmlschema-core:2.1.0'
-    implementation 'org.apache.commons:commons-lang3:3.9'
-    implementation 'com.oracle:ojdbc6:1.0'
+    implementation 'org.apache.commons:commons-lang3:3.8.1'
+    implementation (group:'adcb',name: 'ojdbc', version: '6-1.0')
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     providedCompile 'org.springframework.boot:spring-boot-starter-tomcat'
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
 }
 
-group = 'com.adcb'
-version = '1.0'
-description = 'MDES-MasterCard'
-sourceCompatibility = '1.8'
+//group = 'com.adcb'
+//version = '1.0'
+//description = 'MDES-MasterCard'
+//sourceCompatibility = '1.8'
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
